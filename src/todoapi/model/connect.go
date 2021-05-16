@@ -10,7 +10,7 @@ import (
 
 var con *sql.DB
 
-func Connect() *sql.DB {
+func Connect() (*sql.DB, error) {
 
 	db, err := sql.Open("mysql", "mhaure:Mh..35776251.@tcp(mysql:3306)/mysql")
 
@@ -23,6 +23,6 @@ func Connect() *sql.DB {
 
 	con = db
 
-	return db
+	return db, err
 
 }
