@@ -1,9 +1,10 @@
 package main
 
 import (
+	"net/http"
+
 	"github.com/matihaure/controller"
 	"github.com/matihaure/model"
-	"net/http"
 )
 
 func main() {
@@ -12,15 +13,5 @@ func main() {
 	model.Connect()
 
 	http.ListenAndServe(":3000", mux)
-
-
-
-	//result, err := db.Query("show databases")
-	//
-	//if err != nil {
-	//	log.Fatal(err)
-	//}
-	//
-	//for result.Next()
 
 }
